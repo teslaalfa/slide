@@ -28,8 +28,8 @@ body {
 
 img {
     border-radius: 20px ;
-    width: 1000px;
-    height: 500px;
+    width: 100%;
+    height: auto;
 }
 
 .button-next, .button-prev {
@@ -43,7 +43,7 @@ img {
 
 .button-next {
     position: absolute;
-    right: 13%;
+    right: 20;
 }
 
 .button-next:hover, .button-prev:hover {
@@ -59,10 +59,9 @@ img {
     font-size: 20px;    
 }
 
-@media only screen and (max-width:600px){
-    .header {font-size: 50px;}
-     img {width:450px; height: 300px;}
+@media only screen and (max-width:500px){
+    .header {font-size: 30px;}
+     img {width:fit-content; height: 300px;}
      .button-prev,.button-next {top:20%;}
      .button-next{right:20px;}
 }
-
