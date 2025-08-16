@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <span>Big Wheel In The City</span>
+    </div>
+    <div class="content">
+        <div class="pic1">
+            <div class="pic2">
+                <img class='gambar' src="./asset/1.jpg" alt="helsinski">
+                <img class='gambar' src="./asset/2.jpg" alt="london">
+                <img class='gambar' src="./asset/3.jpg" alt="spore">  
+            </div>  
+            <a class='button-prev' onclick="pushslide(-1)">&#8249;</a>
+            <a class='button-next'onclick="pushslide(1)">&#8250;</a>
+        </div>
+         
+    </div>
+     <div class="footer">
+        <span>2025</span>
+     </div>
+</body>
+</html>
+
+<script>
+
+let slideindex = 1;
+
+slideshow(slideindex)
+
+    function pushslide (n) {
+        slideshow(slideindex += n)
+    }
+
+    function slideshow (n) {
+        let i;
+        let slides = document.getElementsByClassName('gambar');
+        if (n > slides.length){slideindex = 1}
+        if (n < 1){slideindex = slides.length}
+        for (i=0; i<slides.length;i++){
+            slides[i].style.display='none';
+        }
+            slides[slideindex-1].style.display='block'
+    }
+
+</script>
+
