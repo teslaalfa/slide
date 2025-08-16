@@ -8,6 +8,8 @@
 <body>
     <div class="header">
         <span>Big Wheel In The City</span>
+        <button id="dark" onclick="Hdark()">Dark</button>
+        <button id="light" style="display: none;" onclick="Hlight()">Light</button>
     </div>
     <div class="content">
         <div class="pic1">
@@ -23,6 +25,7 @@
     </div>
      <div class="footer">
         <span>2025</span>
+        <p id="screen"></p>
      </div>
 </body>
 </html>
@@ -47,6 +50,35 @@ slideshow(slideindex)
         }
             slides[slideindex-1].style.display='block'
     }
+
+    function screenres () {
+        let w = window.innerWidth;
+        let h = window.innerHeight;
+        let output = document.getElementById('screen')
+        output.innerHTML = w+'x'+h
+    }
+
+    screenres();
+
+
+    function Hdark () {
+        document.body.style.backgroundColor = 'black';
+        document.getElementById('dark').style.display = 'none';
+        document.getElementById('light').style.display = 'inline';
+        document.body.style.color='white';
+    }
+
+     function Hlight () {
+        document.body.style.backgroundColor = 'white';
+        document.getElementById('dark').style.display = 'inline';
+        document.getElementById('light').style.display = 'none';
+        document.body.style.color='black';
+    }
+
+
+
+
+    // window.onload = screenres;
 
 </script>
 
