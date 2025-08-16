@@ -59,9 +59,10 @@ img {
     font-size: 20px;    
 }
 
-@media only screen and (max-width:500px){
+@media only screen and (max-width:600px){
     .header {font-size: 30px;}
      img {width:fit-content; height: 300px;}
      .button-prev,.button-next {top:20%;}
      .button-next{right:20px;}
 }
+
